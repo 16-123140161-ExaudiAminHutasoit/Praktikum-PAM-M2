@@ -54,3 +54,7 @@ Aplikasi ini memanfaatkan Kotlin Flow dan Coroutines untuk mengelola aliran data
 - Coroutines
 - Jetpack Compose
 - StateFlow
+
+## Tampilan Aplikasi
+
+![screenshots Aplikasi](![Cuplikan layar 2026-02-15 013658.png](../../Pictures/Screenshots/Cuplikan%20layar%202026-02-15%20013658.png))
