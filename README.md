@@ -57,4 +57,4 @@ Aplikasi ini memanfaatkan Kotlin Flow dan Coroutines untuk mengelola aliran data
 
 ## Tampilan Aplikasi
 
-![SS](screenshots/scgreenshots1.png)
+![SS](screenshots/screenshots1.png)
