@@ -9,6 +9,14 @@ import androidx.compose.runtime.*
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.*
 
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.unit.dp
+
+
 class MainActivity : ComponentActivity() {
 
     private val _readCount = MutableStateFlow(0)
@@ -73,9 +81,38 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-        Column {
-            Text(text = currentNews)
-            Text(text = "Jumlah berita dibaca: $count")
+        Column(
+            modifier = Modifier
+                .fillMaxSize()
+                .background(Color(0xFFF1F3F6))
+                .padding(16.dp)
+        ) {
+
+            Text(
+                text = "News Feed",
+                style = MaterialTheme.typography.headlineMedium,
+                modifier = Modifier.padding(bottom = 20.dp)
+            )
+
+            Card(
+                modifier = Modifier
+                    .fillMaxWidth()
+                    .padding(bottom = 16.dp),
+                elevation = CardDefaults.cardElevation(defaultElevation = 8.dp)
+            ) {
+                Text(
+                    text = currentNews,
+                    modifier = Modifier.padding(16.dp),
+                    style = MaterialTheme.typography.titleMedium
+                )
+            }
+
+            Text(
+                text = "Jumlah berita dibaca: $count",
+                style = MaterialTheme.typography.bodyLarge,
+                color = Color.Gray
+            )
         }
+
     }
 }
